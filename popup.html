@@ -1,0 +1,113 @@
+<!doctype html>
+<meta charset="utf-8">
+<!--
+  This page is shown when the extension button is clicked, because the
+  "browser_action" field in manifest.json contains the "default_popup" key with
+  value "popup.html".
+-->
+<html>
+
+<head>
+  <title>六度空间</title>
+  <script src='jquery.min.js'></script>
+  <script src='qrious.min.js'></script>
+  <style type="text/css">
+    ::selection {
+      background: #ff0;
+    }
+
+    foot {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      align-items: center;
+      user-select: none;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #Copybutton {
+      padding: .5em 1em;
+    }
+
+    body,
+    textarea,
+    button {
+      font-size: 16px;
+    }
+
+    #container {
+      align-items: center;
+      display: flex;
+      width: 32em;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 1em;
+    }
+
+    #TooltipId {
+      margin-left: 1em;
+      color: #390;
+    }
+
+    #LinkTextarea {
+      caret-color: #f50;
+      height: 5em;
+      outline: 0;
+      padding: .5em;
+    }
+
+    .row {
+      display: flex;
+      padding-left: .5em;
+      align-items: center;
+    }
+
+    #qrcode {
+      width: 8.6em;
+      height: 8.6em;
+      margin-top: -0.15em;
+    }
+
+    #LinkTextarea,
+    foot {
+      width: 100%;
+    }
+
+    #state {
+      color: #f50;
+    }
+
+    #state.spin {
+      padding-right: 2em;
+      background: url(./spin.svg) 100% 50% / 2em no-repeat;
+    }
+  </style>
+
+  <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <div class="row">
+    <canvas id="qrcode"></canvas>
+    <div id="container">
+      <textarea autofocus id="LinkTextarea"></textarea>
+      <foot>
+        <span>
+          <button id="Copybutton">复制</button><span id="TooltipId" style="display:none">已复制到剪贴板</span>
+        </span>
+        <span class="spin" id="state">短连接生成中</span>
+      </foot>
+    </div>
+  </div>
+</body>
+
+</html>
