@@ -19,13 +19,6 @@
 
 这是[开源项目](//github.com/6du-space/url-short)，欢迎参与改进。
 
-
-## 关于作者
-
-[张沈鹏](mailto:zsp042@gmail.com) ，欢迎扫码关注我的微信公众号。
-
-![](https://raw.githubusercontent.com/txtcn/dump/master/touzi-world.svg)
-
 ## 我的其他项目友情推荐
 
 ### 1. [中文语料库-每日自动更新版](//github.com/txtcn/data) 
@@ -42,4 +35,9 @@
 
 ### 2. [从维基百科抽取中文语料](//github.com/txtcn/wiki)
 
+## 关于作者
+
+[张沈鹏](mailto:zsp042@gmail.com) ，欢迎扫码关注我的微信公众号。
+
+![](https://raw.githubusercontent.com/txtcn/dump/master/touzi-world.svg)
 
